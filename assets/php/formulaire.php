@@ -5,7 +5,7 @@
 </head>
 <body>
 	<a href="../../index.php">retour</a>
-	<form action="index.php" method="get">
+	<form action="formulaire.php" method="get">
  		<label>Votre nom : </label><input type="text" name="nom" required /><br />
  		<label>Votre prénom : </label><input type="text" name="prenom" required /><br />
  		<label>Le numéro de votre addresse : </label><input type="text" name="numeroVoie" /><br />

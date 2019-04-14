@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Formulaire PHP</title>
+	<title>Condition PHP</title>
 </head>
 <body>
 	<a href="../../index.php">retour</a>
