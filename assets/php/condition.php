@@ -1,60 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Condition PHP</title>
+	<title>Boucle PHP</title>
 </head>
 <body>
 	<a href="../../index.php">retour</a>
 
 <?php
-	$uneVariable = 0;
-	while ( $uneVariable < 10) {
-		echo $uneVariable. '<br/>';
-		$uneVariable++;
+	$age = 16;
+	if ($age >= 18) {
+		echo "Vous êtes majeur<br/>";
+	}else{
+		echo "Vous êtes mineur<br/>";
 	}
 
 	//exo 2
-	$variableUne = 0;
-	$variableDeux = 50;
-	while ( $variableUne <= 20) {
-		echo $variableUne * $variableDeux . '<br/>';
-		$variableUne++;
+	$isEasy = false;
+	if ($isEasy) {//$isEasy == true
+		echo "C'est facile !!<br/>";
+	}else{
+		echo "C'est difficile !!!<br/>";
 	}
+	//Bonus
+	echo ($isEasy) ? "C'est facile !!<br/>" : "C'est difficile !!!<br/>";
+	//(condition) ? true : false;
 
 	//exo 3
-	$variableTroi = 100;
-	$variableQuatre = 50;
-	while ( $variableTroi > 10) {
-		$result = $variableTroi * $variableQuatre. '<br/>';
-		echo $result;
-		$variableTroi--;
+	$genre = 'homme';
+	if ($age >= 18 && $genre == 'homme') {
+		echo "Vous êtes un homme et vous êtes majeur<br/>";
+	}elseif($age < 18 && $genre == 'homme'){
+		echo "Vous êtes un homme et vous êtes mineur<br/>";
+	}elseif($age >= 18 && $genre == 'femme') {
+		echo "Vous êtes une femme et vous êtes majeure<br/>";
+	}elseif($age < 18 && $genre == 'femme') {
+		echo "Vous êtes une femme et vous êtes mineure<br/>";
+	}else{
+		echo "Merci de choisir entre \"homme\" ou \"femme\"<br/>";
 	}
-
+	
 	//exo 4
-	$variableCinq = 1;
-	while ( $variableCinq < 10) {
-		echo $variableCinq. '<br/>';
-		$variableCinq += ($variableCinq / 2);
+	$magnetude = 5;
+	switch ($magnetude) {
+		case 1:
+			echo "Micro-séisme impossible à ressentir.<br/>";
+			break;
+		case 2:
+			echo "Micro-séisme impossible à ressentir mais enregistrable par les sismomètres.<br/>";
+			break;
+		case 3:
+			echo "Ne cause pas de dégats mais commence à pouvoir être légèrement ressenti.<br/>";
+			break;
+		case 4:
+			echo "Séisme capable de faire bouger des objets mais ne causant généralement pas de dégats.<br/>";
+			break;
+		case 5:
+			echo "Séisme capable d'engendrer des dégats importants sur de vieux bâtiments ou bien des bâtiments présentants des défauts de construction. Peu de dégats sur des bâtiments modernes.<br/>";
+			break;
+		case 6:
+			echo "Fort séisme capable d'engendrer des destructions majeures sur une large distance (180 km) autour de l'épicentre.<br/>";
+			break;
+		case 7:
+			echo "Séisme capable de destructions majeures à modérées sur une très large zone en fonction de la distance.<br/>";
+			break;
+		case 8:
+			echo "Séisme capable de destructions majeures sur une très large zone de plusieurs centaines de kilomètres.<br/>";
+			break;
+		case 9:
+			echo "Séisme capable de tout détruire sur une très vaste zone.<br/>";
+			break;
+		
+		default:
+			echo "Veuillez rentrer une magnétude entre 1 et 10.<br/>";
+			break;
 	}
 
 	//exo 5
-	for ($i=1; $i < 15; $i++) { 
-		echo 'On y arrive presque<br/>';
+	/*<?php
+     echo ($maVariable != 'Homme') ? 'C\'est une développeuse !!!' : 'C\'est un développeur !!!';
+   ?>*/
+   	if ($genre != 'Homme'){
+		echo 'C\'est une développeuse !!!';
+	}else{
+		echo 'C\'est un développeur !!!';
 	}
 
 	//exo 6
-	for ($i=20; $i >= 0; $i--) { 
-		echo "C'est presque bon<br/>";
+	/*<?php
+		echo ($monAge >= 18) ? 'Tu es majeur' : 'Tu n\'es pas majeur';
+   ?>*/
+	if ($age >= 18){
+		echo 'Tu es majeur';
+	}else{
+		echo 'Tu n\'es pas majeur';
 	}
 
 	//exo 7
-	for ($i=1; $i <= 100; $i+=15) { 
-		echo "On tient le bon bout<br/>";
+	/*<?php
+     echo ($maVariable == false) ? 'c\'est pas bon !!!' : 'c\'est ok !!';
+   ?>*/
+	if ($maVariable == false){
+		echo 'c\'est pas bon !!!';
+	}else{
+		echo 'c\'est ok !!';
 	}
 
 	//exo 8
-	for ($i=200; $i >= 0; $i-=12) { 
-		echo "Enfin !!!!<br/>";
+	/*<?php
+     echo ($maVariable) ? 'c'est ok !!' : 'c'est pas bon !!!';
+   ?>*/
+	if ($maVariable){
+		echo 'c\'est ok !!';
+	}else{
+		echo 'c\'est pas bon !!!';
 	}
 ?>
 </body>
